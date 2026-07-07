@@ -3,7 +3,11 @@ name: Publish to npm
 on:
   release:
     types: [created]
-
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: '要发布的 release tag，如 v1.0.3'
+        required: true
 jobs:
   publish:
     runs-on: ubuntu-latest
