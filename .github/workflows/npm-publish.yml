@@ -39,4 +39,4 @@ jobs:
       - name: Publish to npm (OIDC, 无需 token)
         run: |
           cd pkg
-          npm publish *.tgz --access public
+          npm publish *.tgz --access public --provenance=false
